@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <p class="eyebrow">SMALL STEPS, EVERY DAY</p>
+      <h1>Habit Tracker</h1>
+      <p class="subtitle">Build a routine by showing up today.</p>
+    </header>
+
+    <section class="summary" aria-label="Today's progress">
+      <div>
+        <p class="summary-label">TODAY</p>
+        <p id="today-date" class="summary-date"></p>
+      </div>
+      <p id="progress-text" class="progress-text">0 of 0 completed</p>
+    </section>
+
+    <form id="habit-form" class="habit-form">
+      <label class="sr-only" for="habit-input">New habit</label>
+      <input
+        id="habit-input"
+        type="text"
+        maxlength="50"
+        placeholder="Add a habit, e.g. Read for 10 minutes"
+        required
+      >
+      <button type="submit">Add habit</button>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <section>
+      <div class="section-heading">
+        <h2>My habits</h2>
+        <span id="habit-count" class="habit-count">0 habits</span>
+      </div>
+
+      <ul id="habit-list" class="habit-list"></ul>
+
+      <p id="empty-message" class="empty-message">
+        No habits yet. Add one above to get started.
+      </p>
+    </section>
+
+    <footer>
+      Your habits are saved in this browser on this device.
+    </footer>
+  </main>
+</body>
+</html>
